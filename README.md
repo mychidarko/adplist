@@ -11,13 +11,14 @@ This is my challenge app for ADPlist. It is powered by:
 
 ## Getting Started
 
-Clone this project and install all dependencies:
+Clone this project first:
 
 ```bash
 git clone https://github.com/mychidarko/adplist
 cd adplist
-yarn
 ```
+
+From here, a setup command has been created to get you started with everything you need. You can simply run `yarn setup` to get everything ready and install dependencies.
 
 ## Apps & Packages
 
@@ -33,9 +34,9 @@ This monorepo includes the following packages and applications:
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-### Initial Setup
+### Env
 
-Each app has a `.env.example` file which is pre-populated with all the information you need to make this app work. Clone the `.env.example` files to into `.env` files before running `yarn dev`.
+Each app has a `.env.example` file which is pre-populated with all the information you need to make this app work. If you however want to use your own Auth0 or Dyte accounts, you can swap out the information in the created `.env` files.
 
 ### Useful Commands
 
