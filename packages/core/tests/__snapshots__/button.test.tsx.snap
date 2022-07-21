@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Component /> spec renders the component 1`] = `
+<button
+  class="c-btn btn btn-primary undefined"
+  style="justify-content: center; text-align: center; pointer-events: all; align-items: center;"
+>
+  Hello
+</button>
+`;
