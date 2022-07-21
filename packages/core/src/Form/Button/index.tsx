@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { ButtonProps } from './@types/Button';
 
+export type { ButtonProps } from './@types/Button';
+
 const Button: React.FC<ButtonProps> = ({
   to,
   href,
@@ -19,7 +21,6 @@ const Button: React.FC<ButtonProps> = ({
   router = 'none',
   styles,
   align = 'center',
-  action = () => {},
   height,
   ...rest
 }) => {
@@ -36,7 +37,6 @@ const Button: React.FC<ButtonProps> = ({
       alignItems: 'center',
       height,
     },
-    onClick: action,
     ...rest,
   };
 
@@ -97,7 +97,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button {...props}>
       {loading ? (
-        <span>{loaderText}...</span>
+        loader || <span>{loaderText}...</span>
       ) : // <Loader text={loaderText} color={loaderColor} size={loaderSize} />
       icon ? (
         <>
@@ -114,5 +114,7 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+Button.displayName = 'Button';
 
 export default Button;
