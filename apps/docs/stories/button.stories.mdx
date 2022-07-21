@@ -1,11 +1,12 @@
-import { Button } from "@adplist/core/src";
+import { Button } from "@adplist/core";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 <Meta title="Components/Button" component={Button} />
 
 # Button
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+This is a button component which can be used along with any style library of your choice.
+It comes with all the usual logic out of the box, and even has automatic support for bootstrap, tailwind UI and other popular style libraries. 
 
 ## Props
 
@@ -13,8 +14,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
 
 ## Examples
 
+- Default button
+
 <Preview>
   <Story name="Default">
     <Button>Hello</Button>
+  </Story>
+</Preview>
+
+- Disabled State
+
+<Preview>
+  <Story name="Disabled">
+    <Button disabled={true}>Hello</Button>
+  </Story>
+</Preview>
+
+- Loading State
+
+<Preview>
+  <Story name="Loading">
+    <Button loading={true}>Hello</Button>
+  </Story>
+</Preview>
+
+The loading state automatically disables the button.
+
+You can also change the loading text to anything you want:
+
+<Preview>
+  <Story name="Loading with custom text">
+    <Button loaderText="Fetching something" loading={true}>Hello</Button>
+  </Story>
+</Preview>
+
+If you have a custom loader component, you can pass that in as a loader:
+
+<Preview>
+  <Story name="Loading with custom component">
+    <Button loader={<h2>A custom component...</h2>} loading={true}>Hello</Button>
   </Story>
 </Preview>
